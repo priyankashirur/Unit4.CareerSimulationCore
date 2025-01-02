@@ -45,19 +45,19 @@ app.get("/api/items/:itemId/reviews/:id", async (req, res, next) => {
 
 //post a review for a specific item - POST /api/items/:id/reviews
 app.post("/api/items/:id/reviews", async (req, res, next) => {
-  res.status(200).json({ message: "Review posted successfully" });
+  res.status(201).json({ message: "Review posted successfully" });
 });
 
 //get all of my reviews - GET /api/reviews/me
 app.get("/api/reviews/me", async (req, res, next) => {
-  res.status(201).json({ message: "All my reviews retrieved successfully" });
+  res.status(200).json({ message: "All my reviews retrieved successfully" });
 });
 
 //PUT /api/users/:userId/reviews/:id
 
 //post a comment on a review - POST /api/items/:itemId/reviews/:id/comments
 app.post("/api/items/:itemId/reviews/:id/comments", async (req, res, next) => {
-  res.status(200).json({ message: "comment successfully posted" });
+  res.status(201).json({ message: "comment successfully posted" });
 });
 
 //get all my comments - GET /api/comments/me
@@ -77,6 +77,7 @@ app.delete("/api/users/:userId/reviews/:id", async (req, res, next) => {
   res.status(200).json({ message: "Review successfully deleted" });
 });
 
+//
 // Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
